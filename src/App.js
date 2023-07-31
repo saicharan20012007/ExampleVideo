@@ -1,25 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import VideoPlayer from './components/VideoPlayer';
 
-function App() {
+const App = () => {
+  const videoUrl = 'https://res.cloudinary.com/dlovqnrza/video/upload/v1690778987/Prabisha_Consulting_rarkk0.mp4';
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='bg-container'>
+      <h1>Prabisha Consulting</h1>
+      <VideoPlayer videoUrl={videoUrl} />
     </div>
   );
-}
+};
 
 export default App;
