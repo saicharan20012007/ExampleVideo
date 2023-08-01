@@ -1,3 +1,5 @@
+
+
 import React from 'react';
 import ReactPlayer from 'react-player';
 
@@ -5,7 +7,8 @@ const VideoPlayer = ({ videoUrl }) => {
   const playerConfig = {
     file: {
       attributes: {
-        controlsList: 'nodownload', // Disable the download option
+        controlsList: 'nodownload',
+        onContextMenu: e => e.preventDefault(), // Prevent right-click context menu
       },
     },
   };
